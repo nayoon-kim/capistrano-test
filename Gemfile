@@ -67,4 +67,8 @@ gem 'capistrano-figaro-yml'
 gem 'capistrano-database-yml'
 gem 'rvm-capistrano'
 
+gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
+
+gem 'slim'
+
 

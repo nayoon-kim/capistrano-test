@@ -80,6 +80,10 @@ set :deploy_to, "/home/#{fetch(:user)}/#{fetch(:application)}"
 
 server fetch(:remote_server_ip), port: 22, roles: [:web, :app, :db], primary: true
 
+set :sidekiq_role, :app
+set :sidekiq_config, "[sidekiq.yml Full Path]"
+set :sidekiq_env, 'production'
+
 ## SSH Remote 설정 (서버 아이디 및 pem Key 경로 설정)
 set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w([AWS EC2 Key Pair Full Path]) }
 # set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(C:\Users\KCM\Desktop\ruby-kcm.pem) }
