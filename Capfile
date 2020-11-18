@@ -25,7 +25,6 @@ install_plugin Capistrano::SCM::Git
 
 ## Capistrano ↔ Bundler
 ## * bundler require가 없으면 배포 후 자동으로 Gem 설치가 안된다.
-require "capistrano/bundler"
 
 ## Capistrano ↔ assets
 ## *rails/assets require가 없으면 배포 후 자동으로 assets precompile이 안된다.
@@ -46,6 +45,10 @@ require "capistrano/figaro_yml"
 ## Capistrano ↔ database
 ## * database_yml require가 없으면 database.yml 파일이 Remote 서버에 업로드가 안된다.
 require 'capistrano/database_yml'
+
+
+require 'capistrano/rbenv'
+require 'capistrano/bundler'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
