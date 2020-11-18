@@ -1,5 +1,5 @@
-DB_NAME: "cap"
-DB_USER_NAME: "nayoon"
-DB_USER_PASSWD: "1234"
+DB_NAME: "nayoon"
+DB_USER_NAME: "admin"
+DB_USER_PASSWD: "123456"
 
 
