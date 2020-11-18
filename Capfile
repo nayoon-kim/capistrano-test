@@ -28,7 +28,7 @@ install_plugin Capistrano::SCM::Git
 
 ## Capistrano ↔ assets
 ## *rails/assets require가 없으면 배포 후 자동으로 assets precompile이 안된다.
-require "capistrano/rails/assets"
+# require "capistrano/rails/assets"
 
 ## Capistrano ↔ migrations
 ## * rails/migrations require가 없으면 배포 후 자동으로 DB Migrate가 안된다.
