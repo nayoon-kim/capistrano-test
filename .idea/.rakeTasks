@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Settings><!--이 파일은 Ruby 플러그인으로 자동 생성되었습니다.
+다음을 수행할 수 있습니다. 
+1. Rake 작업 제거
+2. 기존 Rake 작업 추가
+기존 Rake 작업을 추가하면 이 파일이 자동으로 삭제되고 프로젝트가 다시 로드됩니다.
+--><RakeGroup description="" fullCmd="" taksId="rake" /></Settings>

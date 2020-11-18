@@ -21,7 +21,7 @@ install_plugin Capistrano::SCM::Git
 # For documentation on these, see for example:
 
 ## Capistrano ↔ RVM 구동
-require "capistrano/rvm"
+# require "capistrano/rvm"
 
 ## Capistrano ↔ Bundler
 ## * bundler require가 없으면 배포 후 자동으로 Gem 설치가 안된다.
