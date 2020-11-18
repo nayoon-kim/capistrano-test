@@ -2740,3 +2740,736 @@
  DEBUG [68fbc7e7] 	To install the missing version, run `gem install bundler:2.1.4`
  DEBUG [68fbc7e7] 	[m
  DEBUG [68fbc7e7] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-18 15:10:52 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+ DEBUG [8e48665d] Running /usr/bin/env which passenger on 15.164.34.138
+ DEBUG [8e48665d] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" ; /usr/bin/env which passenger )
+ DEBUG [8e48665d] 	/usr/bin/passenger
+ DEBUG [8e48665d] 	
+ DEBUG [8e48665d] Finished in 0.872 seconds with exit status 0 (successful).
+  INFO [ac98142a] Running /usr/bin/env mkdir -p /tmp on 15.164.34.138
+ DEBUG [ac98142a] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [ac98142a] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano-test-production-mint.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano-test-production-mint.sh 100.0%
+  INFO [b20109e9] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano-test-production-mint.sh on 15.164.34.138
+ DEBUG [b20109e9] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-capistrano-test-production-mint.sh )
+  INFO [b20109e9] Finished in 0.033 seconds with exit status 0 (successful).
+  INFO [a6e82c64] Running /usr/bin/env git ls-remote git@github.com:nayoon-kim/capistrano-test.git HEAD on 15.164.34.138
+ DEBUG [a6e82c64] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env git ls-remote git@github.com:nayoon-kim/capistrano-test.git HEAD )
+ DEBUG [a6e82c64] 	501354b6f987922b3a6bc6b6c8551abe56b3e056
+ DEBUG [a6e82c64] 		
+ DEBUG [a6e82c64] 	HEAD
+ DEBUG [a6e82c64] 	
+  INFO [a6e82c64] Finished in 2.446 seconds with exit status 0 (successful).
+  INFO [0c6fec91] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared /home/ubuntu/capistrano-test/releases on 15.164.34.138
+ DEBUG [0c6fec91] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared /home/ubuntu/capistrano-test/releases )
+  INFO [0c6fec91] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [eea9eebf] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared/bin /home/ubuntu/capistrano-test/shared/log /home/ubuntu/capistrano-test/shared/tmp/pids /home/ubuntu/capistrano-test/shared/tmp/cache /home/ubuntu/capistrano-test/shared/tmp/sockets /home/ubuntu/capistrano-test/shared/vendor/bundle /home/ubuntu/capistrano-test/shared/public/system /home/ubuntu/capistrano-test/shared/public/uploads /home/ubuntu/capistrano-test/shared/public/img /home/ubuntu/capistrano-test/shared/public/assets on 15.164.34.138
+ DEBUG [eea9eebf] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared/bin /home/ubuntu/capistrano-test/shared/log /home/ubuntu/capistrano-test/shared/tmp/pids /home/ubuntu/capistrano-test/shared/tmp/cache /home/ubuntu/capistrano-test/shared/tmp/sockets /home/ubuntu/capistrano-test/shared/vendor/bundle /home/ubuntu/capistrano-test/shared/public/system /home/ubuntu/capistrano-test/shared/public/uploads /home/ubuntu/capistrano-test/shared/public/img /home/ubuntu/capistrano-test/shared/public/assets )
+  INFO [eea9eebf] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [8067cd89] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared/config on 15.164.34.138
+ DEBUG [8067cd89] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared/config )
+  INFO [8067cd89] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [77c1716d] Running [ -f /home/ubuntu/capistrano-test/shared/config/application.yml ] on 15.164.34.138
+ DEBUG [77c1716d] Command: [ -f /home/ubuntu/capistrano-test/shared/config/application.yml ]
+ DEBUG [77c1716d] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [d095bd2e] Running [ -f /home/ubuntu/capistrano-test/shared/config/master.key ] on 15.164.34.138
+ DEBUG [d095bd2e] Command: [ -f /home/ubuntu/capistrano-test/shared/config/master.key ]
+ DEBUG [d095bd2e] Finished in 0.018 seconds with exit status 0 (successful).
+ DEBUG [ff2abb50] Running [ -f /home/ubuntu/capistrano-test/shared/config/database.yml ] on 15.164.34.138
+ DEBUG [ff2abb50] Command: [ -f /home/ubuntu/capistrano-test/shared/config/database.yml ]
+ DEBUG [ff2abb50] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [1eabc86a] Running [ -f /home/ubuntu/capistrano-test/shared/config/application.yml ] on 15.164.34.138
+ DEBUG [1eabc86a] Command: [ -f /home/ubuntu/capistrano-test/shared/config/application.yml ]
+ DEBUG [1eabc86a] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [5947fdd8] Running [ -f /home/ubuntu/capistrano-test/shared/config/database.yml ] on 15.164.34.138
+ DEBUG [5947fdd8] Command: [ -f /home/ubuntu/capistrano-test/shared/config/database.yml ]
+ DEBUG [5947fdd8] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [7115c007] Running [ -f /home/ubuntu/capistrano-test/shared/config/master.key ] on 15.164.34.138
+ DEBUG [7115c007] Command: [ -f /home/ubuntu/capistrano-test/shared/config/master.key ]
+ DEBUG [7115c007] Finished in 0.018 seconds with exit status 0 (successful).
+ DEBUG [d4abb1e1] Running [ -f /home/ubuntu/capistrano-test/current/REVISION ] on 15.164.34.138
+ DEBUG [d4abb1e1] Command: [ -f /home/ubuntu/capistrano-test/current/REVISION ]
+ DEBUG [d4abb1e1] Finished in 0.068 seconds with exit status 1 (failed).
+ DEBUG [1ce6a64d] Running [ -f /home/ubuntu/capistrano-test/repo/HEAD ] on 15.164.34.138
+ DEBUG [1ce6a64d] Command: [ -f /home/ubuntu/capistrano-test/repo/HEAD ]
+ DEBUG [1ce6a64d] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/capistrano-test/repo
+ DEBUG [9c90f58e] Running if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [9c90f58e] Command: if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi
+ DEBUG [9c90f58e] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [d979d068] Running /usr/bin/env git remote set-url origin git@github.com:nayoon-kim/capistrano-test.git on 15.164.34.138
+ DEBUG [d979d068] Command: cd /home/ubuntu/capistrano-test/repo && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env git remote set-url origin git@github.com:nayoon-kim/capistrano-test.git )
+  INFO [d979d068] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [eb684c8b] Running /usr/bin/env git remote update --prune on 15.164.34.138
+ DEBUG [eb684c8b] Command: cd /home/ubuntu/capistrano-test/repo && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [eb684c8b] 	Fetching origin
+ DEBUG [eb684c8b] 	
+ DEBUG [eb684c8b] 	remote: Enumerating objects: 15, done.[K
+ DEBUG [eb684c8b] 	
+ DEBUG [eb684c8b] 	remote: Counting objects:   6% (1/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  13% (2/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  20% (3/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  26% (4/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  33% (5/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  40% (6/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  46% (7/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  53% (8/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  60% (9/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  66% (10/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  73% (11/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  80% (12/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  86% (13/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects:  93% (14/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects: 100% (15/15)[K
+ DEBUG [eb684c8b] 	remote: Counting objects: 100% (15/15), done.[K
+ DEBUG [eb684c8b] 	
+ DEBUG [eb684c8b] 	remote: Compressing objects:  33% (1/3)[K
+ DEBUG [eb684c8b] 	remote: Compressing objects:  66% (2/3)[K
+ DEBUG [eb684c8b] 	remote: Compressing objects: 100% (3/3)[K
+ DEBUG [eb684c8b] 	remote: Compressing objects: 100% (3/3), done.[K
+ DEBUG [eb684c8b] 	
+ DEBUG [eb684c8b] 	remote: Total 8 (delta 5), reused 8 (delta 5), pack-reused 0[K
+ DEBUG [eb684c8b] 	
+ DEBUG [eb684c8b] 	Unpacking objects:  12% (1/8)
+ DEBUG [eb684c8b] 	Unpacking objects:  25% (2/8)
+ DEBUG [eb684c8b] 	Unpacking objects:  37% (3/8)
+ DEBUG [eb684c8b] 	Unpacking objects:  50% (4/8)
+ DEBUG [eb684c8b] 	Unpacking objects:  62% (5/8)
+ DEBUG [eb684c8b] 	Unpacking objects:  75% (6/8)
+ DEBUG [eb684c8b] 	Unpacking objects:  87% (7/8)
+ DEBUG [eb684c8b] 	Unpacking objects: 100% (8/8)
+ DEBUG [eb684c8b] 	Unpacking objects: 100% (8/8), 22.62 KiB | 2.83 MiB/s, done.
+ DEBUG [eb684c8b] 	
+ DEBUG [eb684c8b] 	From github.com:nayoon-kim/capistrano-test
+ DEBUG [eb684c8b] 	
+ DEBUG [eb684c8b] 	   34194ab..501354b  master     -> master
+ DEBUG [eb684c8b] 	
+  INFO [eb684c8b] Finished in 2.646 seconds with exit status 0 (successful).
+ DEBUG [c6e03742] Running if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [c6e03742] Command: if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi
+ DEBUG [c6e03742] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [5df3b66f] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061056 on 15.164.34.138
+ DEBUG [5df3b66f] Command: cd /home/ubuntu/capistrano-test/repo && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061056 )
+  INFO [5df3b66f] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [ae983473] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/capistrano-test/releases/20201118061056 on 15.164.34.138
+ DEBUG [ae983473] Command: cd /home/ubuntu/capistrano-test/repo && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/capistrano-test/releases/20201118061056 )
+  INFO [ae983473] Finished in 0.033 seconds with exit status 0 (successful).
+ DEBUG [921e2875] Running if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [921e2875] Command: if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi
+ DEBUG [921e2875] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [877c4608] Running /usr/bin/env git rev-list --max-count=1 master on 15.164.34.138
+ DEBUG [877c4608] Command: cd /home/ubuntu/capistrano-test/repo && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [877c4608] 	501354b6f987922b3a6bc6b6c8551abe56b3e056
+ DEBUG [877c4608] 	
+ DEBUG [877c4608] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [dea5b276] Running if test ! -d /home/ubuntu/capistrano-test/releases/20201118061056; then echo "Directory does not exist '/home/ubuntu/capistrano-test/releases/20201118061056'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [dea5b276] Command: if test ! -d /home/ubuntu/capistrano-test/releases/20201118061056; then echo "Directory does not exist '/home/ubuntu/capistrano-test/releases/20201118061056'" 1>&2; false; fi
+ DEBUG [dea5b276] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [741cfbab] Running /usr/bin/env echo "501354b6f987922b3a6bc6b6c8551abe56b3e056" > REVISION on 15.164.34.138
+ DEBUG [741cfbab] Command: cd /home/ubuntu/capistrano-test/releases/20201118061056 && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "501354b6f987922b3a6bc6b6c8551abe56b3e056" > REVISION )
+  INFO [741cfbab] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [25212787] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061056/config on 15.164.34.138
+ DEBUG [25212787] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061056/config )
+  INFO [25212787] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [97178498] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/config/application.yml ] on 15.164.34.138
+ DEBUG [97178498] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/config/application.yml ]
+ DEBUG [97178498] Finished in 0.023 seconds with exit status 1 (failed).
+ DEBUG [0f7b53e6] Running [ -f /home/ubuntu/capistrano-test/releases/20201118061056/config/application.yml ] on 15.164.34.138
+ DEBUG [0f7b53e6] Command: [ -f /home/ubuntu/capistrano-test/releases/20201118061056/config/application.yml ]
+ DEBUG [0f7b53e6] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [e301f718] Running /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061056/config/application.yml on 15.164.34.138
+ DEBUG [e301f718] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061056/config/application.yml )
+  INFO [e301f718] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [42d9862d] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/application.yml /home/ubuntu/capistrano-test/releases/20201118061056/config/application.yml on 15.164.34.138
+ DEBUG [42d9862d] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/application.yml /home/ubuntu/capistrano-test/releases/20201118061056/config/application.yml )
+  INFO [42d9862d] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [b9dcd187] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/config/database.yml ] on 15.164.34.138
+ DEBUG [b9dcd187] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/config/database.yml ]
+ DEBUG [b9dcd187] Finished in 0.020 seconds with exit status 1 (failed).
+ DEBUG [995078be] Running [ -f /home/ubuntu/capistrano-test/releases/20201118061056/config/database.yml ] on 15.164.34.138
+ DEBUG [995078be] Command: [ -f /home/ubuntu/capistrano-test/releases/20201118061056/config/database.yml ]
+ DEBUG [995078be] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [693d0067] Running /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061056/config/database.yml on 15.164.34.138
+ DEBUG [693d0067] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061056/config/database.yml )
+  INFO [693d0067] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [8dea62a3] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/database.yml /home/ubuntu/capistrano-test/releases/20201118061056/config/database.yml on 15.164.34.138
+ DEBUG [8dea62a3] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/database.yml /home/ubuntu/capistrano-test/releases/20201118061056/config/database.yml )
+  INFO [8dea62a3] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [72b47ac2] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/config/master.key ] on 15.164.34.138
+ DEBUG [72b47ac2] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/config/master.key ]
+ DEBUG [72b47ac2] Finished in 0.016 seconds with exit status 1 (failed).
+ DEBUG [c287baff] Running [ -f /home/ubuntu/capistrano-test/releases/20201118061056/config/master.key ] on 15.164.34.138
+ DEBUG [c287baff] Command: [ -f /home/ubuntu/capistrano-test/releases/20201118061056/config/master.key ]
+ DEBUG [c287baff] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [95fd52e2] Running /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061056/config/master.key on 15.164.34.138
+ DEBUG [95fd52e2] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061056/config/master.key )
+  INFO [95fd52e2] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [c775f822] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/master.key /home/ubuntu/capistrano-test/releases/20201118061056/config/master.key on 15.164.34.138
+ DEBUG [c775f822] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/master.key /home/ubuntu/capistrano-test/releases/20201118061056/config/master.key )
+  INFO [c775f822] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [8640db36] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/config/application.yml ] on 15.164.34.138
+ DEBUG [8640db36] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/config/application.yml ]
+ DEBUG [8640db36] Finished in 0.018 seconds with exit status 0 (successful).
+ DEBUG [6fc5b2f7] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/config/database.yml ] on 15.164.34.138
+ DEBUG [6fc5b2f7] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/config/database.yml ]
+ DEBUG [6fc5b2f7] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [0cbd6c2d] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061056 /home/ubuntu/capistrano-test/releases/20201118061056/tmp /home/ubuntu/capistrano-test/releases/20201118061056/vendor /home/ubuntu/capistrano-test/releases/20201118061056/public on 15.164.34.138
+ DEBUG [0cbd6c2d] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061056 /home/ubuntu/capistrano-test/releases/20201118061056/tmp /home/ubuntu/capistrano-test/releases/20201118061056/vendor /home/ubuntu/capistrano-test/releases/20201118061056/public )
+  INFO [0cbd6c2d] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [14e607fb] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/bin ] on 15.164.34.138
+ DEBUG [14e607fb] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/bin ]
+ DEBUG [14e607fb] Finished in 0.062 seconds with exit status 1 (failed).
+ DEBUG [f615095e] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061056/bin ] on 15.164.34.138
+ DEBUG [f615095e] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061056/bin ]
+ DEBUG [f615095e] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [bf722cf4] Running /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061056/bin on 15.164.34.138
+ DEBUG [bf722cf4] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061056/bin )
+  INFO [bf722cf4] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [97ee9438] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/bin /home/ubuntu/capistrano-test/releases/20201118061056/bin on 15.164.34.138
+ DEBUG [97ee9438] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/bin /home/ubuntu/capistrano-test/releases/20201118061056/bin )
+  INFO [97ee9438] Finished in 0.019 seconds with exit status 0 (successful).
+ DEBUG [e24154f4] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/log ] on 15.164.34.138
+ DEBUG [e24154f4] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/log ]
+ DEBUG [e24154f4] Finished in 0.061 seconds with exit status 1 (failed).
+ DEBUG [74563c66] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061056/log ] on 15.164.34.138
+ DEBUG [74563c66] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061056/log ]
+ DEBUG [74563c66] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [fbc64ca4] Running /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061056/log on 15.164.34.138
+ DEBUG [fbc64ca4] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061056/log )
+  INFO [fbc64ca4] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [3098977f] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/log /home/ubuntu/capistrano-test/releases/20201118061056/log on 15.164.34.138
+ DEBUG [3098977f] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/log /home/ubuntu/capistrano-test/releases/20201118061056/log )
+  INFO [3098977f] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [00e72601] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/tmp/pids ] on 15.164.34.138
+ DEBUG [00e72601] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/tmp/pids ]
+ DEBUG [00e72601] Finished in 0.067 seconds with exit status 1 (failed).
+ DEBUG [39a85d49] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061056/tmp/pids ] on 15.164.34.138
+ DEBUG [39a85d49] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061056/tmp/pids ]
+ DEBUG [39a85d49] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [ec3a86e6] Running /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061056/tmp/pids on 15.164.34.138
+ DEBUG [ec3a86e6] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061056/tmp/pids )
+  INFO [ec3a86e6] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [7a44ec53] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/pids /home/ubuntu/capistrano-test/releases/20201118061056/tmp/pids on 15.164.34.138
+ DEBUG [7a44ec53] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/pids /home/ubuntu/capistrano-test/releases/20201118061056/tmp/pids )
+  INFO [7a44ec53] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [f403a48b] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/tmp/cache ] on 15.164.34.138
+ DEBUG [f403a48b] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/tmp/cache ]
+ DEBUG [f403a48b] Finished in 0.064 seconds with exit status 1 (failed).
+ DEBUG [5b43f670] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061056/tmp/cache ] on 15.164.34.138
+ DEBUG [5b43f670] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061056/tmp/cache ]
+ DEBUG [5b43f670] Finished in 0.022 seconds with exit status 1 (failed).
+  INFO [495a960f] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/cache /home/ubuntu/capistrano-test/releases/20201118061056/tmp/cache on 15.164.34.138
+ DEBUG [495a960f] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/cache /home/ubuntu/capistrano-test/releases/20201118061056/tmp/cache )
+  INFO [495a960f] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [c60d2f79] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/tmp/sockets ] on 15.164.34.138
+ DEBUG [c60d2f79] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/tmp/sockets ]
+ DEBUG [c60d2f79] Finished in 0.019 seconds with exit status 1 (failed).
+ DEBUG [66df45c8] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061056/tmp/sockets ] on 15.164.34.138
+ DEBUG [66df45c8] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061056/tmp/sockets ]
+ DEBUG [66df45c8] Finished in 0.064 seconds with exit status 1 (failed).
+  INFO [51769ccc] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/sockets /home/ubuntu/capistrano-test/releases/20201118061056/tmp/sockets on 15.164.34.138
+ DEBUG [51769ccc] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/sockets /home/ubuntu/capistrano-test/releases/20201118061056/tmp/sockets )
+  INFO [51769ccc] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [32313513] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/vendor/bundle ] on 15.164.34.138
+ DEBUG [32313513] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/vendor/bundle ]
+ DEBUG [32313513] Finished in 0.063 seconds with exit status 1 (failed).
+ DEBUG [7ee55f39] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061056/vendor/bundle ] on 15.164.34.138
+ DEBUG [7ee55f39] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061056/vendor/bundle ]
+ DEBUG [7ee55f39] Finished in 0.022 seconds with exit status 1 (failed).
+  INFO [f0a6be38] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/vendor/bundle /home/ubuntu/capistrano-test/releases/20201118061056/vendor/bundle on 15.164.34.138
+ DEBUG [f0a6be38] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/vendor/bundle /home/ubuntu/capistrano-test/releases/20201118061056/vendor/bundle )
+  INFO [f0a6be38] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [f2b85750] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/public/system ] on 15.164.34.138
+ DEBUG [f2b85750] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/public/system ]
+ DEBUG [f2b85750] Finished in 0.022 seconds with exit status 1 (failed).
+ DEBUG [9ddf061a] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061056/public/system ] on 15.164.34.138
+ DEBUG [9ddf061a] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061056/public/system ]
+ DEBUG [9ddf061a] Finished in 0.066 seconds with exit status 1 (failed).
+  INFO [74c88ebf] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/system /home/ubuntu/capistrano-test/releases/20201118061056/public/system on 15.164.34.138
+ DEBUG [74c88ebf] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/system /home/ubuntu/capistrano-test/releases/20201118061056/public/system )
+  INFO [74c88ebf] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [3cae816f] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/public/uploads ] on 15.164.34.138
+ DEBUG [3cae816f] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/public/uploads ]
+ DEBUG [3cae816f] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [f938ffd0] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061056/public/uploads ] on 15.164.34.138
+ DEBUG [f938ffd0] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061056/public/uploads ]
+ DEBUG [f938ffd0] Finished in 0.022 seconds with exit status 1 (failed).
+  INFO [8d0760c8] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/uploads /home/ubuntu/capistrano-test/releases/20201118061056/public/uploads on 15.164.34.138
+ DEBUG [8d0760c8] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/uploads /home/ubuntu/capistrano-test/releases/20201118061056/public/uploads )
+  INFO [8d0760c8] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [4d033b6b] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/public/img ] on 15.164.34.138
+ DEBUG [4d033b6b] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/public/img ]
+ DEBUG [4d033b6b] Finished in 0.021 seconds with exit status 1 (failed).
+ DEBUG [a51a1a56] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061056/public/img ] on 15.164.34.138
+ DEBUG [a51a1a56] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061056/public/img ]
+ DEBUG [a51a1a56] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [4b684884] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/img /home/ubuntu/capistrano-test/releases/20201118061056/public/img on 15.164.34.138
+ DEBUG [4b684884] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/img /home/ubuntu/capistrano-test/releases/20201118061056/public/img )
+  INFO [4b684884] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [6dababb4] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061056/public/assets ] on 15.164.34.138
+ DEBUG [6dababb4] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061056/public/assets ]
+ DEBUG [6dababb4] Finished in 0.061 seconds with exit status 1 (failed).
+ DEBUG [9e55a2d0] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061056/public/assets ] on 15.164.34.138
+ DEBUG [9e55a2d0] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061056/public/assets ]
+ DEBUG [9e55a2d0] Finished in 0.021 seconds with exit status 1 (failed).
+  INFO [68779540] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/assets /home/ubuntu/capistrano-test/releases/20201118061056/public/assets on 15.164.34.138
+ DEBUG [68779540] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/assets /home/ubuntu/capistrano-test/releases/20201118061056/public/assets )
+  INFO [68779540] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [03f4f531] Running if test ! -d /home/ubuntu/capistrano-test/releases/20201118061056; then echo "Directory does not exist '/home/ubuntu/capistrano-test/releases/20201118061056'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [03f4f531] Command: if test ! -d /home/ubuntu/capistrano-test/releases/20201118061056; then echo "Directory does not exist '/home/ubuntu/capistrano-test/releases/20201118061056'" 1>&2; false; fi
+ DEBUG [03f4f531] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [a87ca697] Running $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true on 15.164.34.138
+ DEBUG [a87ca697] Command: cd /home/ubuntu/capistrano-test/releases/20201118061056 && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true )
+ DEBUG [a87ca697] 	[1mTraceback[m (most recent call last):
+ DEBUG [a87ca697] 	
+ DEBUG [a87ca697] 		
+ DEBUG [a87ca697] 	2: from /home/ubuntu/.rbenv/versions/2.6.6/bin/bundle:23:in `<main>'
+ DEBUG [a87ca697] 	
+ DEBUG [a87ca697] 		
+ DEBUG [a87ca697] 	1: from /home/ubuntu/.rbenv/versions/2.6.6/lib/ruby/2.6.0/rubygems.rb:302:in `activate_bin_path'
+ DEBUG [a87ca697] 	
+ DEBUG [a87ca697] 	/home/ubuntu/.rbenv/versions/2.6.6/lib/ruby/2.6.0/rubygems.rb:283:in `find_spec_for_exe'
+ DEBUG [a87ca697] 	: 
+ DEBUG [a87ca697] 	[1m
+ DEBUG [a87ca697] 	Could not find 'bundler' (2.1.4) required by your /home/ubuntu/capistrano-test/releases/20201118061056/Gemfile.lock.
+ DEBUG [a87ca697] 	 (
+ DEBUG [a87ca697] 	[1;4m
+ DEBUG [a87ca697] 	Gem::GemNotFoundException
+ DEBUG [a87ca697] 	[m
+ DEBUG [a87ca697] 	[1m
+ DEBUG [a87ca697] 	)
+ DEBUG [a87ca697] 	[m
+ DEBUG [a87ca697] 	
+ DEBUG [a87ca697] 	[1m
+ DEBUG [a87ca697] 	To update to the latest version installed on your system, run `bundle update --bundler`.
+ DEBUG [a87ca697] 	[m
+ DEBUG [a87ca697] 	
+ DEBUG [a87ca697] 	[1m
+ DEBUG [a87ca697] 	To install the missing version, run `gem install bundler:2.1.4`
+ DEBUG [a87ca697] 	[m
+ DEBUG [a87ca697] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-18 15:11:37 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+ DEBUG [aec0465e] Running /usr/bin/env which passenger on 15.164.34.138
+ DEBUG [aec0465e] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" ; /usr/bin/env which passenger )
+ DEBUG [aec0465e] 	/usr/bin/passenger
+ DEBUG [aec0465e] 	
+ DEBUG [aec0465e] Finished in 0.616 seconds with exit status 0 (successful).
+  INFO [0aefa6bc] Running /usr/bin/env mkdir -p /tmp on 15.164.34.138
+ DEBUG [0aefa6bc] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [0aefa6bc] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-capistrano-test-production-mint.sh 0.0%
+  INFO Uploading /tmp/git-ssh-capistrano-test-production-mint.sh 100.0%
+  INFO [89a2ce67] Running /usr/bin/env chmod 700 /tmp/git-ssh-capistrano-test-production-mint.sh on 15.164.34.138
+ DEBUG [89a2ce67] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-capistrano-test-production-mint.sh )
+  INFO [89a2ce67] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [2b919a25] Running /usr/bin/env git ls-remote git@github.com:nayoon-kim/capistrano-test.git HEAD on 15.164.34.138
+ DEBUG [2b919a25] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env git ls-remote git@github.com:nayoon-kim/capistrano-test.git HEAD )
+ DEBUG [2b919a25] 	501354b6f987922b3a6bc6b6c8551abe56b3e056
+ DEBUG [2b919a25] 		
+ DEBUG [2b919a25] 	HEAD
+ DEBUG [2b919a25] 	
+  INFO [2b919a25] Finished in 2.456 seconds with exit status 0 (successful).
+  INFO [289e1451] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared /home/ubuntu/capistrano-test/releases on 15.164.34.138
+ DEBUG [289e1451] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared /home/ubuntu/capistrano-test/releases )
+  INFO [289e1451] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [980958a5] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared/bin /home/ubuntu/capistrano-test/shared/log /home/ubuntu/capistrano-test/shared/tmp/pids /home/ubuntu/capistrano-test/shared/tmp/cache /home/ubuntu/capistrano-test/shared/tmp/sockets /home/ubuntu/capistrano-test/shared/vendor/bundle /home/ubuntu/capistrano-test/shared/public/system /home/ubuntu/capistrano-test/shared/public/uploads /home/ubuntu/capistrano-test/shared/public/img /home/ubuntu/capistrano-test/shared/public/assets on 15.164.34.138
+ DEBUG [980958a5] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared/bin /home/ubuntu/capistrano-test/shared/log /home/ubuntu/capistrano-test/shared/tmp/pids /home/ubuntu/capistrano-test/shared/tmp/cache /home/ubuntu/capistrano-test/shared/tmp/sockets /home/ubuntu/capistrano-test/shared/vendor/bundle /home/ubuntu/capistrano-test/shared/public/system /home/ubuntu/capistrano-test/shared/public/uploads /home/ubuntu/capistrano-test/shared/public/img /home/ubuntu/capistrano-test/shared/public/assets )
+  INFO [980958a5] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [1bfc4ef8] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared/config on 15.164.34.138
+ DEBUG [1bfc4ef8] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/shared/config )
+  INFO [1bfc4ef8] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [eeae524a] Running [ -f /home/ubuntu/capistrano-test/shared/config/application.yml ] on 15.164.34.138
+ DEBUG [eeae524a] Command: [ -f /home/ubuntu/capistrano-test/shared/config/application.yml ]
+ DEBUG [eeae524a] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [98040420] Running [ -f /home/ubuntu/capistrano-test/shared/config/master.key ] on 15.164.34.138
+ DEBUG [98040420] Command: [ -f /home/ubuntu/capistrano-test/shared/config/master.key ]
+ DEBUG [98040420] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [6c8d82bf] Running [ -f /home/ubuntu/capistrano-test/shared/config/database.yml ] on 15.164.34.138
+ DEBUG [6c8d82bf] Command: [ -f /home/ubuntu/capistrano-test/shared/config/database.yml ]
+ DEBUG [6c8d82bf] Finished in 0.073 seconds with exit status 0 (successful).
+ DEBUG [3df15c44] Running [ -f /home/ubuntu/capistrano-test/shared/config/application.yml ] on 15.164.34.138
+ DEBUG [3df15c44] Command: [ -f /home/ubuntu/capistrano-test/shared/config/application.yml ]
+ DEBUG [3df15c44] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [053a2eed] Running [ -f /home/ubuntu/capistrano-test/shared/config/database.yml ] on 15.164.34.138
+ DEBUG [053a2eed] Command: [ -f /home/ubuntu/capistrano-test/shared/config/database.yml ]
+ DEBUG [053a2eed] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [ceefd6ef] Running [ -f /home/ubuntu/capistrano-test/shared/config/master.key ] on 15.164.34.138
+ DEBUG [ceefd6ef] Command: [ -f /home/ubuntu/capistrano-test/shared/config/master.key ]
+ DEBUG [ceefd6ef] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [67c1571c] Running [ -f /home/ubuntu/capistrano-test/current/REVISION ] on 15.164.34.138
+ DEBUG [67c1571c] Command: [ -f /home/ubuntu/capistrano-test/current/REVISION ]
+ DEBUG [67c1571c] Finished in 0.066 seconds with exit status 1 (failed).
+ DEBUG [8bae25af] Running [ -f /home/ubuntu/capistrano-test/repo/HEAD ] on 15.164.34.138
+ DEBUG [8bae25af] Command: [ -f /home/ubuntu/capistrano-test/repo/HEAD ]
+ DEBUG [8bae25af] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/capistrano-test/repo
+ DEBUG [5a189a59] Running if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [5a189a59] Command: if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi
+ DEBUG [5a189a59] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [67dec7d3] Running /usr/bin/env git remote set-url origin git@github.com:nayoon-kim/capistrano-test.git on 15.164.34.138
+ DEBUG [67dec7d3] Command: cd /home/ubuntu/capistrano-test/repo && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env git remote set-url origin git@github.com:nayoon-kim/capistrano-test.git )
+  INFO [67dec7d3] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [dff59bfc] Running /usr/bin/env git remote update --prune on 15.164.34.138
+ DEBUG [dff59bfc] Command: cd /home/ubuntu/capistrano-test/repo && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [dff59bfc] 	Fetching origin
+ DEBUG [dff59bfc] 	
+  INFO [dff59bfc] Finished in 2.535 seconds with exit status 0 (successful).
+ DEBUG [558e33d2] Running if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [558e33d2] Command: if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi
+ DEBUG [558e33d2] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [cb37712b] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061141 on 15.164.34.138
+ DEBUG [cb37712b] Command: cd /home/ubuntu/capistrano-test/repo && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061141 )
+  INFO [cb37712b] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [04701d07] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/capistrano-test/releases/20201118061141 on 15.164.34.138
+ DEBUG [04701d07] Command: cd /home/ubuntu/capistrano-test/repo && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/capistrano-test/releases/20201118061141 )
+  INFO [04701d07] Finished in 0.039 seconds with exit status 0 (successful).
+ DEBUG [873de533] Running if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [873de533] Command: if test ! -d /home/ubuntu/capistrano-test/repo; then echo "Directory does not exist '/home/ubuntu/capistrano-test/repo'" 1>&2; false; fi
+ DEBUG [873de533] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [b9ce2d1f] Running /usr/bin/env git rev-list --max-count=1 master on 15.164.34.138
+ DEBUG [b9ce2d1f] Command: cd /home/ubuntu/capistrano-test/repo && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-capistrano-test-production-mint.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b9ce2d1f] 	501354b6f987922b3a6bc6b6c8551abe56b3e056
+ DEBUG [b9ce2d1f] 	
+ DEBUG [b9ce2d1f] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [759787ce] Running if test ! -d /home/ubuntu/capistrano-test/releases/20201118061141; then echo "Directory does not exist '/home/ubuntu/capistrano-test/releases/20201118061141'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [759787ce] Command: if test ! -d /home/ubuntu/capistrano-test/releases/20201118061141; then echo "Directory does not exist '/home/ubuntu/capistrano-test/releases/20201118061141'" 1>&2; false; fi
+ DEBUG [759787ce] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [b6d68942] Running /usr/bin/env echo "501354b6f987922b3a6bc6b6c8551abe56b3e056" > REVISION on 15.164.34.138
+ DEBUG [b6d68942] Command: cd /home/ubuntu/capistrano-test/releases/20201118061141 && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "501354b6f987922b3a6bc6b6c8551abe56b3e056" > REVISION )
+  INFO [b6d68942] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [e97aae47] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061141/config on 15.164.34.138
+ DEBUG [e97aae47] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061141/config )
+  INFO [e97aae47] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [e0770e0b] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/config/application.yml ] on 15.164.34.138
+ DEBUG [e0770e0b] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/config/application.yml ]
+ DEBUG [e0770e0b] Finished in 0.029 seconds with exit status 1 (failed).
+ DEBUG [a00e8988] Running [ -f /home/ubuntu/capistrano-test/releases/20201118061141/config/application.yml ] on 15.164.34.138
+ DEBUG [a00e8988] Command: [ -f /home/ubuntu/capistrano-test/releases/20201118061141/config/application.yml ]
+ DEBUG [a00e8988] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [555d2058] Running /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061141/config/application.yml on 15.164.34.138
+ DEBUG [555d2058] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061141/config/application.yml )
+  INFO [555d2058] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [50f38f2a] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/application.yml /home/ubuntu/capistrano-test/releases/20201118061141/config/application.yml on 15.164.34.138
+ DEBUG [50f38f2a] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/application.yml /home/ubuntu/capistrano-test/releases/20201118061141/config/application.yml )
+  INFO [50f38f2a] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [a929d761] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/config/database.yml ] on 15.164.34.138
+ DEBUG [a929d761] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/config/database.yml ]
+ DEBUG [a929d761] Finished in 0.026 seconds with exit status 1 (failed).
+ DEBUG [3c667358] Running [ -f /home/ubuntu/capistrano-test/releases/20201118061141/config/database.yml ] on 15.164.34.138
+ DEBUG [3c667358] Command: [ -f /home/ubuntu/capistrano-test/releases/20201118061141/config/database.yml ]
+ DEBUG [3c667358] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [6eaa6270] Running /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061141/config/database.yml on 15.164.34.138
+ DEBUG [6eaa6270] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061141/config/database.yml )
+  INFO [6eaa6270] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [4d068ea4] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/database.yml /home/ubuntu/capistrano-test/releases/20201118061141/config/database.yml on 15.164.34.138
+ DEBUG [4d068ea4] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/database.yml /home/ubuntu/capistrano-test/releases/20201118061141/config/database.yml )
+  INFO [4d068ea4] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [efad40d2] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/config/master.key ] on 15.164.34.138
+ DEBUG [efad40d2] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/config/master.key ]
+ DEBUG [efad40d2] Finished in 0.020 seconds with exit status 1 (failed).
+ DEBUG [83724dc4] Running [ -f /home/ubuntu/capistrano-test/releases/20201118061141/config/master.key ] on 15.164.34.138
+ DEBUG [83724dc4] Command: [ -f /home/ubuntu/capistrano-test/releases/20201118061141/config/master.key ]
+ DEBUG [83724dc4] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [fae466b7] Running /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061141/config/master.key on 15.164.34.138
+ DEBUG [fae466b7] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm /home/ubuntu/capistrano-test/releases/20201118061141/config/master.key )
+  INFO [fae466b7] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [6a6c19a7] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/master.key /home/ubuntu/capistrano-test/releases/20201118061141/config/master.key on 15.164.34.138
+ DEBUG [6a6c19a7] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/config/master.key /home/ubuntu/capistrano-test/releases/20201118061141/config/master.key )
+  INFO [6a6c19a7] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [63c204cb] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/config/application.yml ] on 15.164.34.138
+ DEBUG [63c204cb] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/config/application.yml ]
+ DEBUG [63c204cb] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [30a2e661] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/config/database.yml ] on 15.164.34.138
+ DEBUG [30a2e661] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/config/database.yml ]
+ DEBUG [30a2e661] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [015c6a33] Running /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061141 /home/ubuntu/capistrano-test/releases/20201118061141/tmp /home/ubuntu/capistrano-test/releases/20201118061141/vendor /home/ubuntu/capistrano-test/releases/20201118061141/public on 15.164.34.138
+ DEBUG [015c6a33] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/ubuntu/capistrano-test/releases/20201118061141 /home/ubuntu/capistrano-test/releases/20201118061141/tmp /home/ubuntu/capistrano-test/releases/20201118061141/vendor /home/ubuntu/capistrano-test/releases/20201118061141/public )
+  INFO [015c6a33] Finished in 0.018 seconds with exit status 0 (successful).
+ DEBUG [4a8a8a84] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/bin ] on 15.164.34.138
+ DEBUG [4a8a8a84] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/bin ]
+ DEBUG [4a8a8a84] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [504565f3] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061141/bin ] on 15.164.34.138
+ DEBUG [504565f3] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061141/bin ]
+ DEBUG [504565f3] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [327a6aae] Running /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061141/bin on 15.164.34.138
+ DEBUG [327a6aae] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061141/bin )
+  INFO [327a6aae] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [e9f15987] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/bin /home/ubuntu/capistrano-test/releases/20201118061141/bin on 15.164.34.138
+ DEBUG [e9f15987] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/bin /home/ubuntu/capistrano-test/releases/20201118061141/bin )
+  INFO [e9f15987] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [255e3520] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/log ] on 15.164.34.138
+ DEBUG [255e3520] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/log ]
+ DEBUG [255e3520] Finished in 0.068 seconds with exit status 1 (failed).
+ DEBUG [7a6a7a0a] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061141/log ] on 15.164.34.138
+ DEBUG [7a6a7a0a] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061141/log ]
+ DEBUG [7a6a7a0a] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [5c4b6c55] Running /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061141/log on 15.164.34.138
+ DEBUG [5c4b6c55] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061141/log )
+  INFO [5c4b6c55] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [738e862e] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/log /home/ubuntu/capistrano-test/releases/20201118061141/log on 15.164.34.138
+ DEBUG [738e862e] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/log /home/ubuntu/capistrano-test/releases/20201118061141/log )
+  INFO [738e862e] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [c6e176ac] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/tmp/pids ] on 15.164.34.138
+ DEBUG [c6e176ac] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/tmp/pids ]
+ DEBUG [c6e176ac] Finished in 0.067 seconds with exit status 1 (failed).
+ DEBUG [2e4af39f] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061141/tmp/pids ] on 15.164.34.138
+ DEBUG [2e4af39f] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061141/tmp/pids ]
+ DEBUG [2e4af39f] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO [03c2739d] Running /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061141/tmp/pids on 15.164.34.138
+ DEBUG [03c2739d] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/ubuntu/capistrano-test/releases/20201118061141/tmp/pids )
+  INFO [03c2739d] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [cf3251a2] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/pids /home/ubuntu/capistrano-test/releases/20201118061141/tmp/pids on 15.164.34.138
+ DEBUG [cf3251a2] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/pids /home/ubuntu/capistrano-test/releases/20201118061141/tmp/pids )
+  INFO [cf3251a2] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [0f3aeb1b] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/tmp/cache ] on 15.164.34.138
+ DEBUG [0f3aeb1b] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/tmp/cache ]
+ DEBUG [0f3aeb1b] Finished in 0.071 seconds with exit status 1 (failed).
+ DEBUG [f247775c] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061141/tmp/cache ] on 15.164.34.138
+ DEBUG [f247775c] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061141/tmp/cache ]
+ DEBUG [f247775c] Finished in 0.030 seconds with exit status 1 (failed).
+  INFO [661756b5] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/cache /home/ubuntu/capistrano-test/releases/20201118061141/tmp/cache on 15.164.34.138
+ DEBUG [661756b5] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/cache /home/ubuntu/capistrano-test/releases/20201118061141/tmp/cache )
+  INFO [661756b5] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [3bb7bc15] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/tmp/sockets ] on 15.164.34.138
+ DEBUG [3bb7bc15] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/tmp/sockets ]
+ DEBUG [3bb7bc15] Finished in 0.026 seconds with exit status 1 (failed).
+ DEBUG [156ab621] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061141/tmp/sockets ] on 15.164.34.138
+ DEBUG [156ab621] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061141/tmp/sockets ]
+ DEBUG [156ab621] Finished in 0.071 seconds with exit status 1 (failed).
+  INFO [638b0664] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/sockets /home/ubuntu/capistrano-test/releases/20201118061141/tmp/sockets on 15.164.34.138
+ DEBUG [638b0664] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/tmp/sockets /home/ubuntu/capistrano-test/releases/20201118061141/tmp/sockets )
+  INFO [638b0664] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [b5b53f82] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/vendor/bundle ] on 15.164.34.138
+ DEBUG [b5b53f82] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/vendor/bundle ]
+ DEBUG [b5b53f82] Finished in 0.068 seconds with exit status 1 (failed).
+ DEBUG [73545e47] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061141/vendor/bundle ] on 15.164.34.138
+ DEBUG [73545e47] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061141/vendor/bundle ]
+ DEBUG [73545e47] Finished in 0.024 seconds with exit status 1 (failed).
+  INFO [ec9eff3f] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/vendor/bundle /home/ubuntu/capistrano-test/releases/20201118061141/vendor/bundle on 15.164.34.138
+ DEBUG [ec9eff3f] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/vendor/bundle /home/ubuntu/capistrano-test/releases/20201118061141/vendor/bundle )
+  INFO [ec9eff3f] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [283c027c] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/public/system ] on 15.164.34.138
+ DEBUG [283c027c] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/public/system ]
+ DEBUG [283c027c] Finished in 0.023 seconds with exit status 1 (failed).
+ DEBUG [4bc7270d] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061141/public/system ] on 15.164.34.138
+ DEBUG [4bc7270d] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061141/public/system ]
+ DEBUG [4bc7270d] Finished in 0.067 seconds with exit status 1 (failed).
+  INFO [cd61af0e] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/system /home/ubuntu/capistrano-test/releases/20201118061141/public/system on 15.164.34.138
+ DEBUG [cd61af0e] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/system /home/ubuntu/capistrano-test/releases/20201118061141/public/system )
+  INFO [cd61af0e] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [9313706e] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/public/uploads ] on 15.164.34.138
+ DEBUG [9313706e] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/public/uploads ]
+ DEBUG [9313706e] Finished in 0.071 seconds with exit status 1 (failed).
+ DEBUG [db3cb6e8] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061141/public/uploads ] on 15.164.34.138
+ DEBUG [db3cb6e8] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061141/public/uploads ]
+ DEBUG [db3cb6e8] Finished in 0.026 seconds with exit status 1 (failed).
+  INFO [bb9eb671] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/uploads /home/ubuntu/capistrano-test/releases/20201118061141/public/uploads on 15.164.34.138
+ DEBUG [bb9eb671] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/uploads /home/ubuntu/capistrano-test/releases/20201118061141/public/uploads )
+  INFO [bb9eb671] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [121105cb] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/public/img ] on 15.164.34.138
+ DEBUG [121105cb] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/public/img ]
+ DEBUG [121105cb] Finished in 0.025 seconds with exit status 1 (failed).
+ DEBUG [b016fcdd] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061141/public/img ] on 15.164.34.138
+ DEBUG [b016fcdd] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061141/public/img ]
+ DEBUG [b016fcdd] Finished in 0.072 seconds with exit status 1 (failed).
+  INFO [ff712e03] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/img /home/ubuntu/capistrano-test/releases/20201118061141/public/img on 15.164.34.138
+ DEBUG [ff712e03] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/img /home/ubuntu/capistrano-test/releases/20201118061141/public/img )
+  INFO [ff712e03] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [038f2782] Running [ -L /home/ubuntu/capistrano-test/releases/20201118061141/public/assets ] on 15.164.34.138
+ DEBUG [038f2782] Command: [ -L /home/ubuntu/capistrano-test/releases/20201118061141/public/assets ]
+ DEBUG [038f2782] Finished in 0.067 seconds with exit status 1 (failed).
+ DEBUG [1c246add] Running [ -d /home/ubuntu/capistrano-test/releases/20201118061141/public/assets ] on 15.164.34.138
+ DEBUG [1c246add] Command: [ -d /home/ubuntu/capistrano-test/releases/20201118061141/public/assets ]
+ DEBUG [1c246add] Finished in 0.026 seconds with exit status 1 (failed).
+  INFO [e2f1c67d] Running /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/assets /home/ubuntu/capistrano-test/releases/20201118061141/public/assets on 15.164.34.138
+ DEBUG [e2f1c67d] Command: ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/ubuntu/capistrano-test/shared/public/assets /home/ubuntu/capistrano-test/releases/20201118061141/public/assets )
+  INFO [e2f1c67d] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [e7049b75] Running if test ! -d /home/ubuntu/capistrano-test/releases/20201118061141; then echo "Directory does not exist '/home/ubuntu/capistrano-test/releases/20201118061141'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [e7049b75] Command: if test ! -d /home/ubuntu/capistrano-test/releases/20201118061141; then echo "Directory does not exist '/home/ubuntu/capistrano-test/releases/20201118061141'" 1>&2; false; fi
+ DEBUG [e7049b75] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [ae94c548] Running $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true on 15.164.34.138
+ DEBUG [ae94c548] Command: cd /home/ubuntu/capistrano-test/releases/20201118061141 && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true )
+  INFO [ae94c548] Finished in 0.338 seconds with exit status 0 (successful).
+  INFO [298a004d] Running $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/ubuntu/capistrano-test/shared/bundle on 15.164.34.138
+ DEBUG [298a004d] Command: cd /home/ubuntu/capistrano-test/releases/20201118061141 && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle config --local path /home/ubuntu/capistrano-test/shared/bundle )
+  INFO [298a004d] Finished in 0.306 seconds with exit status 0 (successful).
+  INFO [eacd7efe] Running $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test on 15.164.34.138
+ DEBUG [eacd7efe] Command: cd /home/ubuntu/capistrano-test/releases/20201118061141 && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test )
+  INFO [eacd7efe] Finished in 0.275 seconds with exit status 0 (successful).
+ DEBUG [1eab6179] Running if test ! -d /home/ubuntu/capistrano-test/releases/20201118061141; then echo "Directory does not exist '/home/ubuntu/capistrano-test/releases/20201118061141'" 1>&2; false; fi on 15.164.34.138
+ DEBUG [1eab6179] Command: if test ! -d /home/ubuntu/capistrano-test/releases/20201118061141; then echo "Directory does not exist '/home/ubuntu/capistrano-test/releases/20201118061141'" 1>&2; false; fi
+ DEBUG [1eab6179] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [f54864c9] Running $HOME/.rbenv/bin/rbenv exec bundle check on 15.164.34.138
+ DEBUG [f54864c9] Command: cd /home/ubuntu/capistrano-test/releases/20201118061141 && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [f54864c9] 	[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31mThe following gems are missing[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * rake (13.0.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * concurrent-ruby (1.1.7)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * i18n (1.8.5)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * minitest (5.14.2)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * thread_safe (0.3.6)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * tzinfo (1.2.8)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * zeitwerk (2.4.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * activesupport (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * builder (3.2.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * erubi (1.10.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * mini_portile2 (2.4.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * nokogiri (1.10.10)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * rails-dom-testing (2.0.3)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * crass (1.0.6)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * loofah (2.7.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * rails-html-sanitizer (1.3.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * actionview (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * rack (2.2.3)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * rack-test (1.1.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * actionpack (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * nio4r (2.5.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * websocket-extensions (0.1.5)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * websocket-driver (0.7.3)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * actioncable (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * globalid (0.4.2)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * activejob (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * activemodel (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * activerecord (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * mimemagic (0.3.5)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * marcel (0.3.3)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * activestorage (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * mini_mime (1.0.2)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * mail (2.7.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * actionmailbox (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * actionmailer (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * actiontext (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * net-ssh (6.1.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * net-scp (3.0.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * sshkit (1.21.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * airbrussh (1.4.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * msgpack (1.3.3)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * bootsnap (1.5.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * capistrano (3.14.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * capistrano-bundler (2.0.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * capistrano-database-yml (1.0.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * capistrano-figaro-yml (1.0.5)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * capistrano-passenger (0.2.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * capistrano-rails (1.6.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * capistrano-rails-collection (0.1.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * capistrano-rbenv (2.2.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * ffi (1.13.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * thor (1.0.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * figaro (1.2.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * jbuilder (2.10.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * method_source (1.0.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * pg (1.2.3)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * puma (4.3.6)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * rack-proxy (0.6.5)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * railties (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * sprockets (4.0.2)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * sprockets-rails (3.2.2)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * rails (6.0.3.4)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * sassc (2.4.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * tilt (2.0.10)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * sassc-rails (2.1.2)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * sass-rails (6.0.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * turbolinks-source (5.2.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * turbolinks (5.2.1)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[31m * webpacker (4.3.0)[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [f54864c9] 	
+ DEBUG [f54864c9] Finished in 0.441 seconds with exit status 1 (failed).
+  INFO [796d563b] Running $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet on 15.164.34.138
+ DEBUG [796d563b] Command: cd /home/ubuntu/capistrano-test/releases/20201118061141 && ( export PATH="~/.rbenv/shims:~/.rbenv/bin:$PATH" RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --jobs 4 --quiet )
+ DEBUG [796d563b] 	[31mYou are trying to install in deployment mode after changing
+ DEBUG [796d563b] 	
+ DEBUG [796d563b] 	your Gemfile. Run `bundle install` elsewhere and add the
+ DEBUG [796d563b] 	
+ DEBUG [796d563b] 	updated Gemfile.lock to version control.
+ DEBUG [796d563b] 	
+ DEBUG [796d563b] 	
+ DEBUG [796d563b] 	If this is a development machine, remove the
+ DEBUG [796d563b] 	
+ DEBUG [796d563b] 	/home/ubuntu/capistrano-test/releases/20201118061141/Gemfile freeze
+ DEBUG [796d563b] 	
+ DEBUG [796d563b] 	by running `bundle config unset deployment`.
+ DEBUG [796d563b] 	
+ DEBUG [796d563b] 	
+ DEBUG [796d563b] 	You have deleted from the Gemfile:
+ DEBUG [796d563b] 	
+ DEBUG [796d563b] 	* rvm-capistrano[0m
+ DEBUG [796d563b] 	
